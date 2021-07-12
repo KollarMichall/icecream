@@ -1,0 +1,26 @@
+input,
+select,
+textarea {
+    margin-bottom: 1.5em;
+}
+.form-frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .form-container {
+        display: flex;
+        width: 500px;
+        background-color: #fff;
+        border-radius: 15px;
+        dl{
+            display: flex;
+            margin-left: 30px;
+
+        }
+        .image-container img {
+            width: 66px;
+            margin-left: 50%;
+        }
+    }
+}

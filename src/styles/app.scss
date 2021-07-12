@@ -1,0 +1,27 @@
+body {
+  background-color: gray;
+ font-family: cursive;
+}
+.App {
+  margin-top: 50px;
+  text-align: center;
+  nav a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    background: #FFF;
+    display: flex;
+    width: 50%;
+    justify-content: center; 
+    margin: auto;
+    color: #111;
+    font-size: 22px;
+    font-weight: 600;
+    &:hover {
+      color: #555;
+    }
+   }
+
+
+}
+

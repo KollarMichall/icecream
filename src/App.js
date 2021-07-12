@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './structure/Header';
+import Footer from './structure/Footer';
+import Menu from './ice-cream/Menu';
+import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom'
+import './styles/app.scss';
+import EditIceCream from './ice-cream/EditIceCream';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+      <Header/>
+        <Switch>
+          <Route path="/" exact component={Menu}/>
+          <Route path="/menu-items/:menuItemId" component={EditIceCream}/>
+          <Redirect to="/"/>
+        </Switch>
+      <Footer/>
+      </div>
+    </Router>
   );
 }
 
